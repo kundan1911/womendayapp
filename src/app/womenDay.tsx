@@ -11,7 +11,7 @@ export default function WomensDayApp() {
   useEffect(() => {
     if (submitted && !hasSpoken) {
       const speakText = () => {
-        const speech1 = new SpeechSynthesisUtterance("Happy Women’s Day,");
+        const speech1 = new SpeechSynthesisUtterance(`Happy Women's Day,`);
         speech1.lang = "en-US";
         const speech2 = new SpeechSynthesisUtterance(name);
         speech2.lang = "hi-IN";
