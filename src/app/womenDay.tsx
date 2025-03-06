@@ -11,7 +11,7 @@ export default function WomensDayApp() {
   useEffect(() => {
     if (submitted && !hasSpoken) {
       const speakText = () => {
-        const speech1 = new SpeechSynthesisUtterance("Happy Womens Day");
+        const speech1 = new SpeechSynthesisUtterance(`Happy Women's Day,`);
         speech1.lang = "en-US";
         const speech2 = new SpeechSynthesisUtterance(name);
         speech2.lang = "hi-IN";
@@ -92,7 +92,11 @@ export default function WomensDayApp() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="text-4xl font-bold text-pink-700 mb-4">Happy Women's Day, {name}!</h1>
+                <h1 className="text-4xl font-bold text-pink-700 mb-4">
+  Happy Women&apos;s Day, {name}!
+</h1>
+
+
         {/* Flower Shower Animation */}
         {[...Array(30)].map((_, i) => (
           <motion.div
